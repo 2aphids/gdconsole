@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqylx7k1s4iha"]
+
+[ext_resource type="Theme" uid="uid://cyecq1dk44856" path="res://config/theme/theme_command_palette.tres" id="1_18fcb"]
+[ext_resource type="Script" uid="uid://b0xun4k4l7kl3" path="res://scripts/ui/console.gd" id="2_l8chn"]
+[ext_resource type="Script" uid="uid://cnm1q2u28ggqw" path="res://scripts/ui/console_input.gd" id="3_oj07u"]
+
+[node name="Console" type="VBoxContainer"]
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_18fcb")
+script = ExtResource("2_l8chn")
+
+[node name="Input" type="VBoxContainer" parent="."]
+show_behind_parent = true
+layout_mode = 2
+theme = ExtResource("1_18fcb")
+
+[node name="LineEdit" type="LineEdit" parent="Input"]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_18fcb")
+theme_override_colors/font_color = Color(0.88, 0.88, 0.88, 1)
+theme_override_constants/caret_width = 9
+keep_editing_on_text_submit = true
+context_menu_enabled = false
+emoji_menu_enabled = false
+caret_blink = true
+caret_blink_interval = 0.1
+caret_mid_grapheme = true
+script = ExtResource("3_oj07u")
+
+[node name="Output" type="VBoxContainer" parent="."]
+show_behind_parent = true
+layout_mode = 2
