@@ -10,6 +10,7 @@ class_name Console extends BoxContainer
 # stupid hack
 func _process(delta: float) -> void:
 	size = get_viewport_rect().size
+	position = Vector2()
 
 
 func toggle() -> void:
