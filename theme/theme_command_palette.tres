@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cyecq1dk44856"]
+
+[ext_resource type="StyleBox" uid="uid://ds15sgceji86r" path="res://addons/gdconsole/theme/theme_command_palette_styleboxflat.tres" id="1_p5d7f"]
+
+[sub_resource type="SystemFont" id="SystemFont_0wfyh"]
+font_names = PackedStringArray("IBM Plex Mono")
+
+[resource]
+default_font = SubResource("SystemFont_0wfyh")
+default_font_size = 14
+Label/constants/outline_size = 5
+Label/styles/normal = null
+LineEdit/colors/font_color = Color(0.73333335, 0.73333335, 0.73333335, 1)
+LineEdit/colors/font_selected_color = Color(0.73333335, 0.73333335, 0.73333335, 1)
+LineEdit/colors/selection_color = Color(0, 0.33333334, 0.46666667, 1)
+LineEdit/styles/focus = ExtResource("1_p5d7f")
+LineEdit/styles/normal = ExtResource("1_p5d7f")
+LineEdit/styles/read_only = ExtResource("1_p5d7f")
+RichTextLabel/colors/default_color = Color(0.73333335, 0.73333335, 0.73333335, 1)
+RichTextLabel/styles/background = ExtResource("1_p5d7f")
+RichTextLabel/styles/fill = ExtResource("1_p5d7f")
+RichTextLabel/styles/focus = ExtResource("1_p5d7f")
+RichTextLabel/styles/normal = ExtResource("1_p5d7f")
+VBoxContainer/constants/separation = 0
