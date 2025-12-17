@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqylx7k1s4iha"]
 
-[ext_resource type="Theme" uid="uid://cyecq1dk44856" path="res://config/theme/theme_command_palette.tres" id="1_18fcb"]
-[ext_resource type="Script" uid="uid://b0xun4k4l7kl3" path="res://scripts/ui/console.gd" id="2_l8chn"]
-[ext_resource type="Script" uid="uid://cnm1q2u28ggqw" path="res://scripts/ui/console_input.gd" id="3_oj07u"]
+[ext_resource type="Theme" uid="uid://cyecq1dk44856" path="res://plugins/gdconsole/theme/theme_command_palette.tres" id="1_18fcb"]
+[ext_resource type="Script" uid="uid://b531b0l787qt1" path="res://plugins/gdconsole/scripts/console.gd" id="2_i4c4i"]
+[ext_resource type="Script" uid="uid://dpn5iceih70n3" path="res://plugins/gdconsole/scripts/console_input.gd" id="3_iah00"]
 
 [node name="Console" type="VBoxContainer"]
 show_behind_parent = true
@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_18fcb")
-script = ExtResource("2_l8chn")
+script = ExtResource("2_i4c4i")
 
 [node name="Input" type="VBoxContainer" parent="."]
 show_behind_parent = true
@@ -31,7 +31,7 @@ emoji_menu_enabled = false
 caret_blink = true
 caret_blink_interval = 0.1
 caret_mid_grapheme = true
-script = ExtResource("3_oj07u")
+script = ExtResource("3_iah00")
 
 [node name="Output" type="VBoxContainer" parent="."]
 show_behind_parent = true
