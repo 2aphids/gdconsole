@@ -2,16 +2,15 @@ extends Node
 
 
 class Log extends Logger:
-	var index := 2 # skip first 2 children: $Input & $Output
+	var index := 1 # skip first 2 children: $Input & $Output
 	var console: Console = null
-
 
 	func _spawn_label(msg: String):
 		if (!console):
 			return
 		var label: Label = Label.new()
 		label.text = msg.replacen("\n", "")
-		# label.theme = load("res://addons/gdconsole/theme/theme_command_palette.tres")
+		label.theme = load("res://addons/gdconsole/theme/theme_command_palette.tres")
 
 		if (console.output.get_children().size() > console.max_lines + 1):
 			console.output.get_child(index).replace_by(label)
@@ -55,3 +54,6 @@ class Log extends Logger:
 
 
 var log := Log.new();
+
+func _init() -> void:
+	OS.add_logger(log)
