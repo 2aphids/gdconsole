@@ -1,4 +1,7 @@
-extends BoxContainer
+class_name Console extends BoxContainer
+
+@export var max_lines := 16
+@export var line_timeout := 5.0
 
 @onready var output: VBoxContainer = $Output
 @onready var line_edit: LineEdit = $Input/LineEdit
@@ -18,6 +21,10 @@ extends BoxContainer
 # 		var prop: PhysicsProp = res.instantiate()
 # 		prop.global_position = Variables.player.find_child("HeldItemPoint", true, false).global_position
 # 		world.add_child(prop)
+
+
+# func _process(delta: float) -> void:
+# 	print(get_children().size())
 
 
 func _cmd_print(args: Array) -> void:
@@ -57,6 +64,7 @@ func close() -> void:
 
 
 func _ready() -> void:
+	ConsoleLogger.log.console = self
 	line_edit.text_changed.connect(Callable(self, "_text_changed"))
 
 

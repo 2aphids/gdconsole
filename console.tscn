@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqylx7k1s4iha"]
 
-[ext_resource type="Theme" uid="uid://cyecq1dk44856" path="res://plugins/gdconsole/theme/theme_command_palette.tres" id="1_18fcb"]
-[ext_resource type="Script" uid="uid://b531b0l787qt1" path="res://plugins/gdconsole/scripts/console.gd" id="2_i4c4i"]
-[ext_resource type="Script" uid="uid://dpn5iceih70n3" path="res://plugins/gdconsole/scripts/console_input.gd" id="3_iah00"]
+[ext_resource type="Theme" uid="uid://cyecq1dk44856" path="res://addons/gdconsole/theme/theme_command_palette.tres" id="1_18fcb"]
+[ext_resource type="Script" uid="uid://b531b0l787qt1" path="res://addons/gdconsole/scripts/console.gd" id="2_i4c4i"]
+[ext_resource type="Script" uid="uid://dpn5iceih70n3" path="res://addons/gdconsole/scripts/console_input.gd" id="3_iah00"]
 
 [node name="Console" type="VBoxContainer"]
 show_behind_parent = true
