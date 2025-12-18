@@ -9,8 +9,10 @@ class Log extends Logger:
 		if (!console):
 			return
 		var label: Label = Label.new()
-		label.text = msg.replacen("\n", "")
+		# label.text = msg.replacen("\n\n", "")
+		label.text = msg.strip_edges()
 		label.theme = load("res://addons/gdconsole/theme/theme_command_palette.tres")
+		label.autowrap_mode = 2
 
 		if (console.output.get_children().size() > console.max_lines + 1):
 			console.output.get_child(index).replace_by(label)

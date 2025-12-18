@@ -54,10 +54,8 @@ func _submit() -> void:
 		cmd.call(cmds.slice(1, cmds.size()))
 	elif (Variables.get(cmds[0]) != null):
 		var args = cmds.slice(0, cmds.size())
-		if (args.size() < 1):
-			return
-		elif (args.size() > 1):
-			var t = typeof(Variables.get(args[0]))
+		var t = typeof(Variables.get(args[0]))
+		if (args.size() > 1):
 			match t:
 				TYPE_STRING:
 					Variables.set(args[0], args[1])
@@ -67,6 +65,8 @@ func _submit() -> void:
 					Variables.set(args[0], args[1].to_int())
 				TYPE_FLOAT:
 					Variables.set(args[0], args[1].to_float())
+		elif (t == TYPE_BOOL):
+			Variables.set(args[0], !Variables.get(args[0]))
 		if Variables.MAN.has(str(args[0])):
 			print(Variables.MAN[str(args[0])])
 		print(str(args[0]) + " = " + str(Variables.get(args[0])))
