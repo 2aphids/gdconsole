@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqylx7k1s4iha"]
+[gd_scene load_steps=3 format=3 uid="uid://cqylx7k1s4iha"]
 
-[ext_resource type="Theme" uid="uid://cyecq1dk44856" path="res://addons/gdconsole/theme/theme_command_palette.tres" id="1_18fcb"]
 [ext_resource type="Script" uid="uid://b531b0l787qt1" path="res://addons/gdconsole/scripts/console.gd" id="2_i4c4i"]
 [ext_resource type="Script" uid="uid://dpn5iceih70n3" path="res://addons/gdconsole/scripts/console_input.gd" id="3_iah00"]
 
@@ -13,7 +12,6 @@ offset_left = 2.0
 offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_18fcb")
 script = ExtResource("2_i4c4i")
 
 [node name="Input" type="VBoxContainer" parent="."]
@@ -23,7 +21,6 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="Input"]
 visible = false
 layout_mode = 2
-theme = ExtResource("1_18fcb")
 theme_override_colors/font_color = Color(0.88, 0.88, 0.88, 1)
 theme_override_constants/caret_width = 9
 keep_editing_on_text_submit = true

@@ -7,6 +7,12 @@ class_name Console extends BoxContainer
 @onready var line_edit: LineEdit = $Input/LineEdit
 
 
+func _ready() -> void:
+	ConsoleLogger.log.console = self
+	line_edit.text_changed.connect(Callable(self, "_text_changed"))
+	line_edit.theme = theme
+
+
 # stupid hack
 func _process(delta: float) -> void:
 	size = get_viewport_rect().size
@@ -25,11 +31,6 @@ func toggle() -> void:
 func close() -> void:
 	line_edit.visible = false
 	# Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
-func _ready() -> void:
-	ConsoleLogger.log.console = self
-	line_edit.text_changed.connect(Callable(self, "_text_changed"))
 
 
 func _input(_event) -> void:

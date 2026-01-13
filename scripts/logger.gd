@@ -11,7 +11,7 @@ class Log extends Logger:
 		var label: Label = Label.new()
 		# label.text = msg.replacen("\n\n", "")
 		label.text = msg.strip_edges()
-		label.theme = load("res://addons/gdconsole/theme/theme_command_palette.tres")
+		label.theme = console.theme
 		label.autowrap_mode = 2
 
 		if (console.output.get_children().size() > console.max_lines + 1):
