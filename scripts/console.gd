@@ -18,13 +18,13 @@ func toggle() -> void:
 	if (line_edit.visible):
 		line_edit.grab_focus()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	else:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	# else:
+	# 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func close() -> void:
 	line_edit.visible = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	# Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _ready() -> void:
