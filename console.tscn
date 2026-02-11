@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqylx7k1s4iha"]
+[gd_scene format=3 uid="uid://cqylx7k1s4iha"]
 
 [ext_resource type="Script" uid="uid://b531b0l787qt1" path="res://addons/gdconsole/scripts/console.gd" id="2_i4c4i"]
 [ext_resource type="Script" uid="uid://dpn5iceih70n3" path="res://addons/gdconsole/scripts/console_input.gd" id="3_iah00"]
 
-[node name="Console" type="VBoxContainer"]
+[node name="Console" type="VBoxContainer" unique_id=1950166032]
 show_behind_parent = true
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,11 +14,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_i4c4i")
 
-[node name="Input" type="VBoxContainer" parent="."]
+[node name="Input" type="VBoxContainer" parent="." unique_id=235308974]
 show_behind_parent = true
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="Input"]
+[node name="LineEdit" type="LineEdit" parent="Input" unique_id=1348050746]
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.88, 0.88, 0.88, 1)
@@ -31,6 +31,6 @@ caret_blink_interval = 0.1
 caret_mid_grapheme = true
 script = ExtResource("3_iah00")
 
-[node name="Output" type="VBoxContainer" parent="."]
+[node name="Output" type="VBoxContainer" parent="." unique_id=1304334197]
 show_behind_parent = true
 layout_mode = 2
