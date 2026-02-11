@@ -9,7 +9,7 @@ class Log extends Logger:
 		if (!console):
 			return
 		var label: Label = Label.new()
-		# label.text = msg.replacen("\n\n", "")
+
 		label.text = msg.strip_edges()
 		label.theme = console.theme
 		label.autowrap_mode = 2
